@@ -1,4 +1,4 @@
-#!/usr/bin/python
+﻿#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 # Este script é responsável por ler o arquivo de dados de covid-19
@@ -19,11 +19,17 @@ start_time = time.time()
 print('Processando...\n')
 
 ### Lê a fonte de dados
-df = pd.read_excel('./datasrc/HIST_PAINEL_COVIDBR_20mai2020.xlsx')
+df = pd.read_excel('./datasrc/HIST_PAINEL_COVIDBR_21mai2020.xlsx')
+
+### Lê o arquivo com as geolocalizações dos municípios
+df_localizacoes = pd.read_csv('./datasets/datasets_localizacao_municipios.csv')
+df_localizacoes['codmun'] = df_localizacoes['codigo_ibge']//10
+df_localizacoes = df_localizacoes[['codmun', 'latitude', 'longitude']]
 
 ### Cria o dataset de municípios
 df_city = df[df['municipio'].notnull()]
 df_city = df_city.fillna(0)
+df_city = pd.merge(df_city, df_localizacoes, on='codmun')
 
 ### Cria o dataset de estados
 df_state = df[(df['municipio'].isnull()) & (df['estado'].notnull())]
