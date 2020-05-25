@@ -2,11 +2,9 @@
 import pandas as pd
 from util import get_file
 
-PATH = './datasrc/'
-
-def preprocessamento():
+def preprocessamento(path):
   ### Lê a fonte de dados mais recente
-  df = pd.read_excel(get_file.most_recent_file(PATH))
+  df = pd.read_excel(get_file.most_recent_file(path))
 
   ###########################################################################################
   ### Lê o arquivo com as geolocalizações dos municípios
