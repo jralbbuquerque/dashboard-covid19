@@ -1,9 +1,12 @@
 ## Import libraries
 import pandas as pd
+from util import get_file
+
+PATH = './datasrc/'
 
 def preprocessamento():
-  ### Lê a fonte de dados
-  df = pd.read_excel('./datasrc/HIST_PAINEL_COVIDBR_24mai2020.xlsx')
+  ### Lê a fonte de dados mais recente
+  df = pd.read_excel(get_file.most_recent_file(PATH))
 
   ###########################################################################################
   ### Lê o arquivo com as geolocalizações dos municípios

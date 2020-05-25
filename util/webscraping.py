@@ -32,7 +32,7 @@ def scraping_data_covid(url):
       "//*[@class='btn-white md button button-solid button-has-icon-only ion-activatable ion-focusable hydrated']").click()
 
   # Espera 10 segundos para o arquivo ser baixado
-  time.sleep(10)
+  time.sleep(15)
 
   # Fecha a página
   driver.quit()
