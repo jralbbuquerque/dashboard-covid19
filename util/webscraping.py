@@ -16,7 +16,7 @@ def scraping_data_covid(url):
                   {"download.default_directory": "C:\\Users\\Junior\\Documents\\Dev\\dashboard-covid19\\datasrc\\"})
 
   # Atribui a variável driver o objeto webdriver com as pré-definições
-  driver = webdriver.Chrome(r"C:\Users\Junior\AppData\Local\Programs\Python\Python36\chromedriver.exe", chrome_options=option)
+  driver = webdriver.Chrome(chrome_options=option)
 
   # Maximiza a página
   driver.maximize_window()
