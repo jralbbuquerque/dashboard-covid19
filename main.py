@@ -35,12 +35,12 @@ if __name__ == '__main__':
   print('-'*80)
 
   print('+ Download dos dados...')
-  try:
-    webscraping.scraping_data_covid(config['DS']['URL'], config['DS']['PATH_DOWNLOAD'])
-    print("+ Download finalizado!")
-  except:
-    print("+ Erro ao realizar o download!")
-    exit(-1)
+  #try:
+  webscraping.scraping_data_covid(config['DS']['URL'], config['DS']['PATH_DOWNLOAD'])
+  #  print("+ Download finalizado!")
+  #except:
+  #  print("+ Erro ao realizar o download!")
+  #  exit(-1)
 
   print('-'*80)
 
