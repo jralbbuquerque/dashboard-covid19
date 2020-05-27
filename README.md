@@ -11,7 +11,6 @@
     <img alt="Dashboard" title="#delicinha" src="images/imagem_dashboard.png" width="500px" />
 </h1>
 
--------
 ## 💻 Overview
 Este repositório contêm um projeto de dashboard para monitoramento de dados do COVID-19, para o Brasil e seus estados e municípios, desenvolvido com Power BI e Python 3. O painel está disponível [neste link](https://app.powerbi.com/view?r=eyJrIjoiNjUwY2M5YzctMmZhYy00NzBlLTg5ZjgtNmMwZjIzYWIwNmMyIiwidCI6IjVjODg0N2M3LTZiNjQtNDNmMC04ZTg4LWMyNTA5OTgyNTQ5ZiJ9) e é atualizado diariamente com dados do [Ministério da Saúde](https://covid.saude.gov.br/).
 
