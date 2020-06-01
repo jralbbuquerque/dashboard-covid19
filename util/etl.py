@@ -61,7 +61,7 @@ def preprocessamento(path):
 
   ###########################################################################################
   ### Cria o dataset de país
-  df_country = df[(df['municipio'].isnull()) & (df['estado'].isnull())]
+  df_country = df[(df['municipio'].isnull()) & (df['estado'].isnull()) & (df['regiao'].notnull())]
   df_country = df_country.drop(['municipio', 
                                 'codmun', 
                                 'estado',
